@@ -6,11 +6,11 @@ import { createHashRouter,createBrowserRouter, RouterProvider } from 'react-rout
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/vite_test/",
     element: <App />,
   },
   {
-    path: ":okay",
+    path: "/vite_test/:okay",
     element: <div>lol</div>
   },
   {
