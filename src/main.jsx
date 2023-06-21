@@ -4,19 +4,13 @@ import App from './App.jsx'
 import './index.css'
 import { createHashRouter,createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    children: [
-      {
-        path: "/:okay",
-        element: <div>okay</div>
-      }
-    ]
   },
   {
-    path: "/:okay",
+    path: ":okay",
     element: <div>lol</div>
   },
   {
@@ -27,7 +21,14 @@ const router = createHashRouter([
 
 ])
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+/* ReactDOM.createRoot(document.getElementById("root")).render(
   <RouterProvider router={router} />
-);
+); */
+
+
+const rootElement = document.getElementById('root');
+const root = createRoot(rootElement);
+
+root.render(<RouterProvider router={router} />);
+
 

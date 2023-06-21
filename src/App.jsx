@@ -1,12 +1,10 @@
-import { HashRouter, BrowserRouter, Route, Routes } from "react-router-dom";
-
-export default function App() {
-  
+import React from 'react';
+import { HashRouter, Route } from 'react-router-dom';
 
 
-  return (
-      <div className="App">
-        App
-      </div>
-  );
-}
+ 
+ const App = () => {
+  return <div>lmao</div>
+ }
+
+export default App
