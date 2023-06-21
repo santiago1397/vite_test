@@ -1,17 +1,19 @@
 import React from 'react'
-import ReactDOM,{createRoot} from 'react-dom/client'
+import ReactDOM, { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import { createHashRouter,createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createHashRouter, createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 const router = createBrowserRouter([
   {
-    path: "/vite_test/",
+    path: "/",
     element: <App />,
-  },
-  {
-    path: "/vite_test/:okay",
-    element: <div>lol</div>
+    children:[
+      {
+        path: "/:okay",
+        element: <App />,
+      }
+    ]
   },
   {
     path: "*",
