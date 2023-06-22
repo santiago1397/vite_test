@@ -10,8 +10,12 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: ":okay",
+    path: "/hello/:okay",
     element: <div>okay</div>,
+  },
+  {
+    path: "/hello/",
+    element: <div>hello</div>,
   },
   {
     path: "*",
@@ -19,7 +23,7 @@ const router = createBrowserRouter([
   }
 
 
-])
+],{ basename: "/vite_test"})
 
 /* ReactDOM.createRoot(document.getElementById("root")).render(
   <RouterProvider router={router} />
