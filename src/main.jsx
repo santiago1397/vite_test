@@ -4,7 +4,7 @@ import App from './App.jsx'
 import './index.css'
 import { createHashRouter, createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
